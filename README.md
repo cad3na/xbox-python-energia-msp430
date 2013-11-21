@@ -19,14 +19,14 @@ Pygame is a nice library for developing video games in Python (though I have onl
 
 There are some dependencies that I could install from [brew](http://brew.sh).
 
-'''bash
+```bash
     brew install sdl
     brew install sdl_image
     brew install sdl_mixer
     brew install sdl_ttf
     brew install portmidi
     brew install mercurial
-'''
+```
 
 What I found is that the pip version of pygame is not working, so just go ahead and:
 
