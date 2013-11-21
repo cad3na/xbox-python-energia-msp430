@@ -42,6 +42,10 @@ Pyserial is just a simple and reliable library for comunicating over serial.
 
 First you need to install [Energia](http://energia.nu). When you download it, you copy the app, and install the driver for the MSP430 boards (this is the only way that I've been able to use my MSP430 Launchpad with my Mac, and that alone is a very good reason to try it out). The Energia system is a fork of the Arduino, that allows you to work with the Launchpad ecosystem with a higher level of abstraction, and reusing many examples from the Arduino community.
 
+## On the real side.
+
+I'm using a *Rev 1.5 Launchpad board* with an *MSP430G2553*. This is important! I struggled for hours with the serial comunication before realizing that I was doing it all wrong. With Energia you'll want to use *Hardware UART*. Software UART is too slow to give you reliable readings. The instructions for enabling the Hardware UART are [here](http://www.energia.nu/Serial.html).
+
 ## Xbox 360 Controller driver.
 
 I used [this](http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver) driver to connect my Xbox 360 Controller to my Mac (there are official drivers for Windows already available from Microsoft).
