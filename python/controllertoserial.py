@@ -21,6 +21,8 @@ while True:
 	if msp.readable():
 		if msp.read(4) == ":)\r\n":
 			pygame.event.pump()
+			if xcon.get_button(10) == 1:
+				break
 			eje = xcon.get_axis(4)
 			eje /= 2
 			eje += 0.5
