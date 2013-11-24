@@ -68,6 +68,34 @@ The script is simple, it receives a signal from the serial port to set the brigh
 
 The python script is actually pretty simple too. Imports and initializes the libraries needed to get the signal from the Xbox controller and the MPS430. Then it looks for the signal from the MSP430 to tell the script that it can begin to send data. Refreshes the data from the Xbox controller and sends out the data to the MSP430 (the Xbox controller sends values between -1 and 1, so it's mapped from 0 to 255).
 
+## How they work.
+
+All right then, let's say you have all the dependencies and you've downloaded this files, you've installed correctly the Energia IDE with the drivers for the Launchpad. Let's look at the steps for running all this code.
+
+1. You need to open the code in the ```energia``` folder on the Energia IDE.
+2. Make sure the Energia IDE knows the uC you're using (the only one that worked for me in this example is the 2553).
+3. Compile the code.
+4. Upload it to the Launchpad.
+
+If you've successfully done this, take a minute to test the code is working properly with the aid of the Serial Monitor.
+
+1. Make sure the serial port selected in the Energia IDE is the correct one (Tools -> Serial Port).
+2. Fire up the Serial Monitor (Tools -> Serial Monitor).
+3. Write a number from ```0``` to ```255``` and hit Return (or click Send).
+4. A little ```:)``` should appear telling you that the Launchpad received the data and that it has set up the brightness accordingly.
+5. You should try other values too (```0``` for completely off, something in between for dim, ```255``` for completely lit up and something higher will be taken as ```255```).
+
+If everything went right in this stage, you're ready to move on to the Python script.
+
+1. Open up the script with your favorite text editor/IDE (by the way I always recommend [Sublime Text](http://www.sublimetext.com)) and change the port name to the port name that appears as your Launchpad (as in the one that appears in your Energia IDE).
+2. Run the Python script by either ```python controllertoserial.py``` on your terminal or from your text editor build command (what? not all of the text editors have build commands?).
+
+If everything goes smoothly you should see that the LED goes off and it brights up depending on the displacement of the left trigger on your Xbox controller. If nothing happens perhaps pushing the RESET button on your Launchpad helps. When you're done playing around with it, you can press the central button on your controller to finish the execution of the script.
+
+# Bugs!
+
+This script doesn't handle well the syncronization between the Launchpad and the computer, meaning that from time this script won't work at all. Which bring me to the next section.
+
 # Help make this better!
 
 If you have corrections (or any comment whatsoever) make a pull request and make this example better.
