@@ -23,13 +23,10 @@ while True:
 			pygame.event.pump()
 			if xcon.get_button(10) == 1:
 				break
-			eje = xcon.get_axis(4)
-			eje /= 2
-			eje += 0.5
-			eje *= 256
-			eje = int(eje)
-			eje = str(eje)
-			msp.write(eje)
+			axis = xcon.get_axis(4)
+			axis = (axis + 1)*128
+			axis_str = str(int(axis))
+			msp.write(axis_str)
 
 # Closes pygame and the serial port
 pygame.quit()
