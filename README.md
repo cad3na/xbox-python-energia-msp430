@@ -11,7 +11,7 @@ The first thing I want to share with you is the collective of software needed to
 
 ### Python.
 
-Well, that one is kind of obvious... but perhaps it's relevant to say that I'm using Python 2.7.5. There are many ways to obtain a python interpreter, the one I recommend is [brew](http://brew.sh).
+Well, that one is kind of obvious... but perhaps it's relevant to say that I'm using Python 2.7.6. There are many ways to obtain a python interpreter, the one I recommend is [conda](https://store.continuum.io/cshop/anaconda/).
 
 ### Pygame.
 
